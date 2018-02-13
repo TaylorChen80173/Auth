@@ -1,0 +1,297 @@
+$base-point-size: 8px;
+
+$typography-ratio: 1.333;
+$font-size: 16px;
+$line-height: 22px;
+
+$colour-font: #32394F;
+$colour-font-negative: #FFFFFF;
+$colour-background: #FFFFFF;
+$colour-background-medium: #FAFAFC;
+$colour-border: #DDDDEE;
+$colour-border-light: #EEEEEE;
+
+$colour-primary: #2196F3;
+$colour-accents: (
+  blue: #2196F3,
+  green: #00B378,
+  red: #F44336,
+  yellow: #FFC107,
+  orange: #FF9800,
+  purple: #673AB7
+);
+
+$colour-variation: 10%;
+
+$border-radius: 2px;
+
+$color-table-row-alt: #F8F8F8;
+
+.table-wrapper {
+  /* display: block; */
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  overflow-x: auto;
+  /* border: 1px solid $colour-border; */
+  border-radius: 2px;
+  & table {
+    border: none;
+  }
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  background-color: $colour-background;
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* border: 1px solid $colour-border; */
+
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 3px;
+
+  line-height: $line-height;
+  font-size: $font-size;
+}
+
+table .q-checkbox-unchecked,
+table .q-checkbox-checked {
+  height: inherit;
+  width: inherit;
+  font-size: 1.2rem;
+}
+
+.table-striped {
+  & tr {
+    &:nth-child(even) {
+      & > td {
+        background-color: $color-table-row-alt;
+      }
+    }
+  }
+}
+
+th,
+td {
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+th {
+  /* padding: 0.5rem 1rem; */
+  /* padding: 6px 10px; */
+  padding: 0.375rem 0.625rem;
+  font-weight: normal;
+  background-color: $colour-background-medium;
+  border-right: 1px solid $colour-border;
+  border-bottom: 1px solid $colour-border;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 0;
+  background-color: #213649;
+  color: #fff;
+  height: $line-height;
+}
+
+td {
+  font-weight: normal;
+  /* padding: 0.5rem 1rem; */
+  /* padding: 6px 10px; */
+  padding: 0.375rem 0.625rem;
+  border-right: 1px solid $colour-border-light;
+  border-bottom: 1px solid $colour-border-light;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 0;
+  /* height: $line-height; */
+}
+/*
+.datatable-cell div {
+  height: $line-height;
+}
+*/
+tbody,
+tfoot {
+  &:last-of-type {
+    & tr {
+      &:last-of-type {
+        & > td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+tfoot {
+  & td {
+    font-weight: 600;
+  }
+  & tr {
+    &:first-of-type {
+      & td {
+        border-top: 1px solid $colour-border;
+      }
+    }
+  }
+}
+
+.datatable {
+  & th {
+    padding: 0;
+  }
+}
+
+.datatable-linenumber-column,
+.datatable-linenumber-cell {
+  text-align: center;
+}
+
+.datatable-linenumber-cell,
+.datatable-aggregate-cell {
+  font-weight: 600;
+  /* background-color: $colour-background-medium !important; */
+  border-right-color: $colour-border;
+}
+
+.datatable-linenumber-cell {
+  border-right-color: $colour-border;
+}
+
+.datatable-group-chip {
+  margin-right: 0.5rem;
+}
+
+.datatable-collection {
+  & .datatable-collection {
+    & .datatable-resultset {
+      border-top: 1px solid $colour-border;
+    }
+  }
+}
+
+.datatable-group {
+  padding: 0;
+  background-color: $colour-background;
+  border-bottom: 1px solid $colour-border;
+}
+
+.datatable-groups-header {
+  border-bottom: 1px solid $colour-border;
+}
+
+.datatable-group-header {
+  padding: 0.5rem 1rem;
+  background-color: $colour-background-medium;
+}
+
+.datatable-grouping-over {
+  box-shadow: 0 0 0 2px $colour-primary;
+}
+
+.datatable-row-indent {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1em;
+}
+
+.datatable-group-label {
+  font-weight: 600;
+}
+
+.datatable-info-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.datatable-aggregators {
+  & .datatable-info-cell {
+    border-bottom: 1px solid $colour-border;
+  }
+}
+
+.datatable-options {
+  padding: 0.75rem 1rem;
+  background-color: $colour-background-medium;
+  border-top: 1px solid $colour-border;
+}
+
+.datatable-editable {
+  & .datatable-cell {
+    position: relative;
+    padding: 0 !important;
+    overflow: visible;
+
+    & input,
+    & select {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border: none;
+      border-radius: 0;
+
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 2px $colour-primary;
+      }
+    }
+  }
+}
+
+.datatable-right-border {
+  border-right: 1px solid $colour-border;
+}
+
+.datatable-left-border {
+  border-left: 1px solid $colour-border;
+}
+
+.datatable-bottom-border {
+  border-bottom: 1px solid $colour-border;
+}
+
+.datatable-column-fix {
+  position: absolute;
+  margin-left: -50px;
+  width: 50px;
+}
+
+.datatable-group-chip {
+  height: 1rem;
+}
+
+table .q-if:before {
+  padding-bottom: 0;
+  min-height: 28px;
+  padding-left: 12px;
+}
+table .q-if {
+  min-height: 28px;
+  border: 1px solid #a2a2a0;
+}
+table .q-if-focused {
+  border: 1px solid #581715;
+}
+table .q-field {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+table input.q-input-target {
+  height: 28px;
+}
+table .s-checkbox {
+  height: inherit;
+}

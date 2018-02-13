@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.tw.auth"
+    },
+    "jhipsterVersion": "4.14.0",
+    "baseName": "AuthManagerAPI",
+    "packageName": "com.tw.auth",
+    "packageFolder": "com/tw/auth",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mssql",
+    "prodDatabaseType": "mssql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSocialSignIn": false,
+    "jwtSecretKey": "0d722ca2d7e4fe7c298a1009f5b9ec1ed8be5501",
+    "enableTranslation": false,
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "applicationType": "monolith",
+    "jhiPrefix": "jhi"
+  }
+}
