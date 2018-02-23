@@ -200,7 +200,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-data-ldap"
     compile "org.springframework:spring-tx"
     compile "com.unboundid:unboundid-ldapsdk"
-    compile 'mysql:mysql-connector-java'
+    compile "mysql:mysql-connector-java:${mysql_version}"
 	// 另外加入--end
 
     compile "org.springframework.boot:spring-boot-starter-undertow"
@@ -216,6 +216,7 @@ dependencies {
         exclude module: 'mapstruct'
     }
     compile "io.springfox:springfox-bean-validators"
+    compile "com.microsoft.sqlserver:mssql-jdbc"
     compile "com.microsoft.sqlserver:mssql-jdbc"
     compile "com.github.sabomichal:liquibase-mssql"
     compile "org.mapstruct:mapstruct-jdk8:${mapstruct_version}"

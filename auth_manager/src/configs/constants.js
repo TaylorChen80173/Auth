@@ -15,8 +15,8 @@ export const layout = {
 
 // 網路相關設定
 export const network = {
-  baseAddress: 'http://60.251.22.61:8080/AuthManagerAPI/'
-  // baseAddress: 'http://localhost:8080/'
+  // baseAddress: 'http://60.251.22.61:8080/AuthManagerAPI/'
+  baseAddress: 'http://localhost:8080/'
 }
 
 export const tableOptions = {

@@ -56,7 +56,7 @@
         captchaImage: '',
         disable: false, // TODO: using recaptcha must set to true
         model: {
-          username: 'am@bs.com',
+          username: '',
           password: '',
           rememberMe: true,
           roleCode: null,
@@ -84,7 +84,7 @@
     methods: {
       ...mapMutations(['setAuthToken', 'setAccountInfo', 'setLoginFirst']),
       submit () {
-        this.route('StudentMaintenance')
+        this.route('UserManage')
         this.$v.model.$touch()
         if (this.model.captcha === '') {
           this.captchaError = '請輸入驗證碼!!'
